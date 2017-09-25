@@ -1,0 +1,22 @@
+<h1>Conditions</h1>
+
+<p>
+  <%= weather_page_path %>
+</p>
+
+<p>
+  <%= link_to "(this page)", weather_page_path %>
+</p>
+
+<p>
+  <%= city_page_path('toronto') %><br />
+  <%= link_to 'Toronto', city_page_path('toronto') %>
+</p>
+
+<p><%= @latest_comment %></p>
+
+<% Comment.all.each do |comment| %>
+  <p>
+    <%= comment.city %>: <%= comment.message %>
+  </p>
+<% end %>
